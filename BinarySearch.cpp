@@ -39,7 +39,7 @@ void bubbleSortArray()
     int pass = 1;
     do
     {
-        for (int j = 0; j <= nPanjang - 1 - Pass; j++)
+        for (int j = 0; j <= nPanjang - 1 - pass; j++)
         {
             if (element[j] > element[j +1])
             {
@@ -48,5 +48,23 @@ void bubbleSortArray()
                 element[j + 1] = temp;
             }
         }
+        pass++;
+    } while (pass <= nPanjang -1);
+}
+
+void display()
+{
+    cout << "\n====================================\n";
+    cout << "  Elemen Array Setelah diurutkan (Asc)\n";
+    cout << "======================================\n";
+
+    for (int j = 0; j < nPanjang; j++)
+    {
+        cout << element[j];
+        if (j < nPanjang - 1)
+        {
+            cout << " -> ";
+        }
     }
+    cout << endl;
 }
